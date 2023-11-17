@@ -6,7 +6,7 @@
 /*   By: azbk <azbk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 18:14:54 by azbk              #+#    #+#             */
-/*   Updated: 2023/11/17 18:22:02 by azbk             ###   ########.fr       */
+/*   Updated: 2023/11/17 18:48:27 by azbk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ char	*get_next_line(int fd)
 	static char	*stash[MAX_OPEN];
 	char		*line;
 
-	if (!BUFFER_SIZE || BUFFER_SIZE < 0 || fd < 0)
+	if (!BUFFER_SIZE || BUFFER_SIZE < 0 || fd < 0 || fd > MAX_OPEN)
 		return (NULL);
 	stash[fd] = ft_read_stash(fd, stash[fd]);
 	if (!stash[fd])

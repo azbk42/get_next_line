@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: azbk <azbk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/22 23:40:50 by mmourdal          #+#    #+#             */
-/*   Updated: 2023/11/17 13:57:24 by azbk             ###   ########.fr       */
+/*   Created: 2023/11/17 18:16:03 by azbk              #+#    #+#             */
+/*   Updated: 2023/11/17 18:22:17 by azbk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
+#include <fcntl.h>
 #include <stdio.h>
 #include <unistd.h>
-#include <fcntl.h>
-
 
 int	main(int ac, char **av)
 {
 	int		fd;
-	char *line;
+	char	*line;
 
 	if (ac != 2)
 	{
@@ -28,7 +27,6 @@ int	main(int ac, char **av)
 	}
 	fd = open(av[1], O_RDONLY);
 	printf("BUFFER SIZE = %d\n", BUFFER_SIZE);
-	
 	line = get_next_line(fd);
 	while (line)
 	{
@@ -38,5 +36,4 @@ int	main(int ac, char **av)
 	}
 	free(line);
 	close(fd);
-	
 }

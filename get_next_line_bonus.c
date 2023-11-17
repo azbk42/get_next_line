@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: azbk <azbk@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 15:44:04 by mmourdal          #+#    #+#             */
-/*   Updated: 2023/11/17 17:50:51 by azbk             ###   ########.fr       */
+/*   Created: 2023/11/17 18:14:54 by azbk              #+#    #+#             */
+/*   Updated: 2023/11/17 18:22:02 by azbk             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-
 
 static char	*ft_read_stash(int fd, char *stash)
 {
